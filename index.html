@@ -16,17 +16,17 @@
                 <div class="logo">
                     <img src="/images/logo.png" alt="">
                 </div>
-                <ul class="nav-links">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Products</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="">Account</a></li>
-                    <div class="cart-logo">
-                        <img src="/images/cart.png" alt="">
-                    </div>
-    
-                </ul>
+                <div class="nav">
+                    <ul class="nav-links" id="nav-links">
+                        <li><a href="">Home</a></li>
+                        <li><a href="">Products</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="">Account</a></li>
+                    </ul>
+                </div>
+                <img src="/images/cart.png" class="cart-icon" alt="">
+                <img src="/images/menu.png" class="menu-icon" alt="" onclick="menuToggle()">
             </nav>
 
             <div class="row">
@@ -376,7 +376,19 @@
 
 
 
+    <script>
+        let menuItems = document.getElementById('nav-links');
+        menuItems.style.maxHeight = '0px';
 
+        function menuToggle() {
+            console.log('btn clicked')
+            if (menuItems.style.maxHeight == '0px') {
+                menuItems.style.maxHeight == '200px';
+            } else {
+                menuItems.style.maxHeight == '0px';
+            }
+        }
+    </script>
 
 
 </body>
